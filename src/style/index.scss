@@ -1,16 +1,52 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
-/* 
-    body{
-        background: #BDBDBD;
-    }
-    
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
-
-*/
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5rem;
+  width: 50rem;
+  height: 40rem;
+}
+h1 {
+  color: #dab7b7;
+}
+ul {
+  list-style: none;
+  width: 40rem;
+}
+input {
+  width: 100%;
+  height: 4rem;
+  border: 1px solid #dee2e6;
+}
+.taskCounter {
+  justify-content: left;
+  height: 30px;
+  font-size: 18px;
+}
+li {
+  border: 1px solid #dee2e6;
+  border-top: none;
+}
+p {
+  padding-left: 3%;
+}
+.tasks {
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  color: #dee2e6;
+  padding-left: 6%;
+  height: 4rem;
+  justify-content: space-between;
+}
+.fa {
+  color: #dab7b7;
+  padding-right: 4%;
+}
+#addToDo {
+  font-size: 30px;
+  padding-left: 6%;
+  color: #757575;
+}
