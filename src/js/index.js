@@ -16,16 +16,17 @@ let counter = 0;
 function addTask() {
   let input = document.getElementById("addToDo");
   input.addEventListener("keyup", function(event) {
-    if (event.keyCode == 13) {
+    if (event.keyCode == 13 && input.value.replace(" ", "") != "") {
       let ul = document.querySelector("ul");
       let newLi = document.createElement("li");
       newLi.className = "tasks text-muted";
       newLi.innerHTML = input.value + '<i class="fa fa-times"></i>';
-      newLi.querySelector("i").addEventListener("click", function(event) {
+      newLi.querySelector("i").addEventListener("click", ciao);
+      function ciao() {
         this.parentNode.remove();
         counter--;
         taskCounter(counter);
-      });
+      }
       ul.insertBefore(newLi, document.querySelector(".taskCounter"));
       input.value = "";
       counter++;
